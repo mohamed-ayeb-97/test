@@ -29,7 +29,7 @@ st.write("This is a Streamlit app running alongside a Flask app.")
 query = st.text_input("Enter your query:")
 if st.button("Send"):
     if query:
-        response = requests.post('http://localhost:5000/chat', json={'query': query, 'chat_history': []})
+        response = requests.post('http://localhost:8050/chat', json={'query': query, 'chat_history': []})
         st.write("Response from Flask:", response.json())
     else:
         st.write("Please enter a query.")
